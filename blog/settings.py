@@ -138,6 +138,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://localhost:8080',
     'http://localhost:4040',
+    'http://localhost:5500',
 ]
 
 # Internationalization
