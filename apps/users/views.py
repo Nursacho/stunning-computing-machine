@@ -10,6 +10,11 @@ class ProfileViewSetAPI(generics.ListAPIView):
     serializer_class = UserSerializer
 
 
+class ProfileDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
 class ProfileUpdateViewSet(generics.UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
