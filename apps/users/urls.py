@@ -1,10 +1,9 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import (
+    UserAPIViewSet,
+)
 
-from .views import ProfileViewSetAPI, ProfileUpdateViewSet, ProfileDetail
 
-
-urlpatterns = [
-    path('', ProfileViewSetAPI.as_view(), name='profiles-list'),
-    path('update/<int:pk>/', ProfileUpdateViewSet.as_view()),
-    path('<int:pk>/', ProfileDetail.as_view())
-]
+router = DefaultRouter()
+router.register(r'', UserAPIViewSet, basename='users')
+urlpatterns = router.urls

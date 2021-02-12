@@ -140,13 +140,13 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8080',
     'http://localhost:4040',
     'http://localhost:5500',
-    'http://127.0.0.1:5500/',
+    'http://127.0.0.1:5500',
 ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -202,6 +202,14 @@ JET_APP_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultAppIndexDashboard'
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 SITE_ID = 1
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_USER_EMAIL_FIELD = 'email'
+ACCOUNT_LOGOUT_ON_GET = True
+
 AUTH_USER_MODEL = 'users.User'
 
 SIMPLE_JWT = {
